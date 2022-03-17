@@ -1,54 +1,43 @@
 @font-face {
-    font-family: 'RM Neue TRIAL';
-    src: url(../fonts/RMNeueTRIAL-BoldItalic.woff2) format('woff2'),
-        url(../fonts/RMNeueTRIAL-BoldItalic.woff) format('woff');
+    font-family: 'Montserrat Light';
+    src: url(../fonts/Montserrat-Light.woff) format('woff');
+    font-weight: lighter;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Montserrat SemiBold';
+    src: url(../fonts/Montserrat-SemiBold.woff) format('woff');
     font-weight: bold;
-    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'RM Neue TRIAL';
-    src: url(../fonts/RMNeueTRIAL-Bold.woff2) format('woff2'),
-        url(../fonts/RMNeueTRIAL-Bold.woff) format('woff');
-    font-weight: bold;
-    font-style: normal;
+    font-family: 'Montserrat Bold';
+    src: url(../fonts/Montserrat-Bold.woff) format('woff');
+    font-weight: bolder;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'RM Neue TRIAL';
-    src: url(../fonts/RMNeueTRIAL-Italic.woff2) format('woff2'),
-        url(../fonts/RMNeueTRIAL-Italic.woff) format('woff');
-    font-weight: normal;
-    font-style: italic;
+    font-family: 'Montserrat Medium';
+    src: url(../fonts/Montserrat-Medium.woff) format('woff');
+    font-weight: medium;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'RM Neue TRIAL';
-    src: url(../fonts/RMNeueTRIAL-Regular.woff2) format('woff2'),
-        url(../fonts/RMNeueTRIAL-Regular.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Almarena';
+    src: url(../fonts/Almarena\ Display\ Bold.woff) format('woff');
+    font-style: bold;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'RM Neue TRIAL';
-    src: url(../fonts/RMNeueTRIAL-Light.woff2) format('woff2'),
-        url(../fonts/RMNeueTRIAL-Light.woff) format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'RM Neue TRIAL';
-    src: url(../fonts/RMNeueTRIAL-LightItalic.woff2) format('woff2'),
-        url(../fonts/RMNeueTRIAL-LightItalic.woff) format('woff');
-    font-weight: 300;
-    font-style: italic;
+    font-family: 'Almarena Regular';
+    src: url(../fonts/Almarena\ Display\ Regular.woff) format('woff');
+    font-style: regular;
     font-display: swap;
 }
 
@@ -66,20 +55,24 @@ body {
     color: black;
     line-height: 1.5;
     background-color: white;
-    margin: 0;
+    background: rgb(210,210,210);
+    background: linear-gradient(170deg, rgba(210,210,210,1) 0%, rgba(255,255,255,1) 56%);
+    font-family: 'Montserrat Medium';
 }
 
 header {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    border-bottom: 2px solid yellowgreen;
+    
 }
 
 .headerflex {
     justify-content: space-between;
     display: flex;
     align-items: flex-start;
-    margin: 3rem;
+    margin: 3rem 8rem 15rem 8rem;
     padding: 0 2rem 0 2rem;
 }
 
@@ -99,33 +92,130 @@ header {
 }
 
 .dot {
-    height: 35px;
-    width: 35px;
-    background-color: #bbb;
-    border-radius: 50%;
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50px;
+    background-color: yellowgreen;
+    transition: height .5s ease-in-out;
     display: inline-block;
-    margin: 15px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
+.dot img {
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    align-content: center;
+}
+
+.box img{
+    padding: 10px;
+}
+
+#dotOne:hover, #dotOne:focus {
+    height: 185px;
+    border-radius: 50px;
+    background: rgb(255,223,90);
+    background: linear-gradient(160deg, rgba(255,223,90,1) 0%, rgba(255,150,181,1) 61%, rgba(233,76,123,1) 100%); 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+#dotTwo:hover, #dotTwo:focus {
+    height: 282px;
+    border-radius: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+#dotThree:hover, #dotThree:focus {
+    height: 232px;
+    border-radius: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+#dotOne:hover h2 {
+    opacity: 100%;
+}
+
+#dotTwo:hover h2 {
+    opacity: 100%;
+}
+
+#dotThree:hover h2 {
+    opacity: 100%;
+}
+
+
+.dot h2 {
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright; 
+    padding-top: 17px;
+    display: unset;
+    color: white;
+    font-family: 'Almarena';
+    font-style: regular;
+    opacity:0; 
+    transition: .8s ease-in-out;
+}
+
 
 .middleContainer {
     justify-content: center;
     display: flex;
-    margin: 2rem;
-    padding: 3rem 12rem 3rem 12rem;
     align-content: center;
-    border-radius: 50%;
-    border: 5px solid pink;
     width: auto;
-    height: 200px;
-    top: calc(50% - 25px);
-    right: calc(50% - 50px);
+    align-items: flex-start;
+    margin: 5rem 17rem 5rem 10rem;
+    flex-direction: column;
+    font-family: 'Almarena';
 }
 
 
 .about-me {
     font-size: 20px;
-    font-family: 'RMNeueTRIAL-Regular';
     margin: 0;
+    padding: 20px 0;
+    font-family: 'Almarena Regular';
+}
+
+.resumeButton {
+    background-color: lightgrey;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: .4px solid rgba(255, 255, 255, 0.75);
+    color: black;
+    letter-spacing: .05rem;
+}
+
+.resumeButton:hover {
+    background: rgb(255,223,90);
+    background: linear-gradient(160deg, rgba(255,223,90,1) 0%, rgba(255,150,181,1) 61%, rgba(233,76,123,1) 100%); 
+    cursor: pointer;
+    color: white;
+}
+
+.resumeButton h2 {
+    font-family: 'Almarena Regular';
+}
+
+
+a:focus {
+    text-decoration: none;}
+
+a:link {
+    text-decoration: none;
+}
+
+a:after {
+    color: yellowgreen;
 }
 
 .bottomcontainer {
@@ -142,14 +232,16 @@ header {
 
 .projects {
     display: flex;
-    flex-direction: row-reverse;
-    padding-top: 2rem;
-    padding-right: 6rem;
+    flex-direction: row;
 }
 
 .projects h2{
-    font-family: 'RMNeueTRIAL-Bold';
-    font-size: 25px;
+    font-family: 'Almarena';
+    font-size: 24px;
+    font-style: normal;
+    letter-spacing: .15rem;
+    padding-bottom: 1.5rem;   
+    padding-left: 10rem; 
 }
 
 main {
@@ -174,8 +266,8 @@ main {
 }
 
 .titleOne {
-    background: rgb(58,83,209);
-    background: linear-gradient(120deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
+    background: rgb(230,232,255);
+    background: linear-gradient(170deg, rgba(230,232,255,1) 0%, rgba(255,255,255,1) 91%);
     height: auto;
     width: 100%;
     display: flex;
@@ -184,6 +276,20 @@ main {
     justify-content: space-around;
     color: white;
     padding: 5px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.titlesubOne {
+    padding-left: 1rem;
+    font-family: 'Almarena';
+    font-style: normal;
+    letter-spacing: .075rem;  
+    color: blueviolet;
+}
+
+.titlesubOne h1 {
+    font-size: 25px;
 }
 
 
@@ -200,18 +306,18 @@ main {
 
 
 .descriptionOne {
-    background-color: white;
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: .5rem 2.5rem .5rem 5rem;
 }
 
 .descriptionOne p {
-    font-size: 14px;
+    font-size: 13px;
     padding: 1.5rem 0 1.5rem 0;
+    font-weight: 100;
 }
 
 .viewbuttonOne {
@@ -236,44 +342,55 @@ main {
     align-items: center;
 }
 
+
 .rowTwo {
     display: flex;
-    justify-content: space-around;
-    height: auto;
+    justify-content: space-evenly;
+    max-height: 14rem;
     margin: 4rem 0 4rem 0;
+    flex-direction:row;
 }
 
 .titleTwo {
-    background: rgb(58,83,209);
-    background: linear-gradient(120deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
+    background: white;
+    color: palevioletred;
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+.titlesubTwo h1{
+    font-family: 'Almarena';
+    font-style: normal;
+    letter-spacing: .075rem;
+    font-size: 24px;
+}
 
 .seatImg {
     display: inline-block;
-    width: 60%;
+    height: 200px;
+    width: auto;
 }
 
 
 .descriptionTwo {
-    background-color: white;
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 1rem 5rem 1rem 5rem;
+    padding: .5rem 2.5rem .5rem 5rem;
 }
 
-.descriptionTwo p {
-    font-size: 14px;
+.descriptionTwo p{
+    font-size: 13px;
+    font-family: 'Montserrat Medium';
     padding: 1.5rem 0 1.5rem 0;
 }
 
@@ -281,30 +398,36 @@ main {
     background: rgb(58,83,209);
     background: linear-gradient(90deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
     border-radius: 50px;
-    width:100px;  
-    height:30px; 
+    width: 120px;  
+    height:35px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .viewbuttonTwo h1 {
     color: white;
-    padding:.5rem;
+    font-size: 20px;
+    align-items: center;
 }
+
 
 .buttonFlex {
     display: flex;
     align-items: center;
 }
 
+
 .rowThree {
     display: flex;
-    justify-content: space-around;
-    height: auto;
+    justify-content: space-evenly;
+    max-height: 14rem;
     margin: 4rem 0 4rem 0;
+    flex-direction:row;
 }
 
 .titleThree {
-    background: rgb(58,83,209);
-    background: linear-gradient(120deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
+    background: white;
     height: auto;
     width: 100%;
     display: flex;
@@ -312,27 +435,47 @@ main {
     align-items: center;
     justify-content: space-around;
     color: white;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+.titlesubThree {
+    padding-left: 1rem;
+    font-family: 'Almarena';
+    font-style: normal;
+    letter-spacing: .075rem;  
+    color: goldenrod;
+}
+
+.titlesubThree h1 {
+    font-size: 25px;
+}
 
 .poppersImg {
     display: inline-block;
-    width: 55%;
+    height: 260px;
+    width: auto;
+    z-index: 10rem;
+    position: relative;
+    margin-bottom: 1.5 rem;
+    position: relative;
+    top: -25px;
+    padding-right: 3rem;
 }
 
 
 .descriptionThree {
-    background-color: white;
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 1rem 5rem 1rem 5rem;
+    padding: .5rem 2.5rem .5rem 5rem;
 }
 
 .descriptionThree p {
-    font-size: 14px;
+    font-size: 13px;
     padding: 1.5rem 0 1.5rem 0;
 }
 
@@ -340,25 +483,31 @@ main {
     background: rgb(58,83,209);
     background: linear-gradient(90deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
     border-radius: 50px;
-    width:100px;  
-    height:30px; 
+    width: 120px;  
+    height:35px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .viewbuttonThree h1 {
     color: white;
-    padding:.5rem;
+    font-size: 20px;
+    align-items: center;
 }
+
+
 
 .rowFour {
     display: flex;
-    justify-content: space-around;
-    height: auto;
+    justify-content: space-evenly;
+    max-height: 14rem;
     margin: 4rem 0 4rem 0;
+    flex-direction:row;
 }
 
 .titleFour {
-    background: rgb(58,83,209);
-    background: linear-gradient(120deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
+    background-color: white;
     height: auto;
     width: 100%;
     display: flex;
@@ -366,28 +515,45 @@ main {
     align-items: center;
     justify-content: space-around;
     color: white;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+.titlesubFour {
+    padding-left: 1rem;
+    font-family: 'Almarena';
+    font-style: normal;
+    letter-spacing: .075rem;  
+    color: blueviolet;
+}
+
+.titlesubFour h1 {
+    font-size: 24px;
+}
 
 .hubImg {
     display: inline-block;
-    height: 300px;
-    width: 300px;
+    height: 275px;
+    width: 275px;
+    z-index: 10rem;
+    position: relative;
+    margin-bottom: 1.5 rem;
+    position: relative;
+    top: -25px;
 }
 
-
 .descriptionFour {
-    background-color: white;
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 1rem 5rem 1rem 5rem;
+    padding: .5rem 2.5rem .5rem 5rem;
 }
 
 .descriptionFour p {
-    font-size: 14px;
+    font-size: 13px;
     padding: 1.5rem 0 1.5rem 0;
 }
 
@@ -395,14 +561,19 @@ main {
     background: rgb(58,83,209);
     background: linear-gradient(90deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
     border-radius: 50px;
-    width:100px;  
-    height:30px; 
+    width: 120px;  
+    height:35px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .viewbuttonFour h1 {
     color: white;
-    padding:.5rem;
+    font-size: 20px;
+    align-items: center;
 }
+
 
 .buttonFlex {
     display: flex;
@@ -428,11 +599,19 @@ main {
 } */
 
 @media (max-width: 800px) {
+
+    body {
+    margin: 0;
+    }
     
     .logo {
     display: inline-block;
     height: 100px;
     width: 100px;
+    }
+
+    header {
+        margin: 0;
     }
 
     .headerflex {
@@ -459,14 +638,15 @@ main {
     .middleContainer {
         justify-content: center;
         display: flex;
-        margin: 5rem 8rem 5rem 8rem;
+        margin: 3rem 4rem 5rem 4rem;
         padding: 0;
+        align-self: center;
     }
     
     .about-me {
         font-size: 14px;
         font-family: 'RMNeueTRIAL-Regular';
-        padding: 0;
+        padding: 1.5rem 0;
         margin: 0;
     }
     
@@ -484,17 +664,23 @@ main {
     }
     
     .projects h2{
-        font-family: 'RMNeueTRIAL-Bold';
-        font-size: 16px;
+        font-family: 'Almarena';
+        font-size: 18px;
+        padding-bottom: 1rem;
+        letter-spacing: .2rem;
     }
 
     .projectsPage {
         border-top: white solid .1rem;
         width: 100%;
-        overflow: auto;
         background: white;
-        height: auto;
+        height: 100%;
         padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        overflow: hidden;
+        top: 0;
     }
     
     .rowOne {
@@ -502,17 +688,19 @@ main {
         flex-direction: column;
         justify-content: space-evenly;
         height: auto;
-        margin: 0;
         padding: 2rem;
+        position: relative;
+        z-index: 10;
+        top: auto;
+        min-height: 600px;
+        margin-bottom: 8rem;
     }
 
     .titleOne {
-        background: rgb(58,83,209);
-        background: linear-gradient(120deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
         height: auto;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: baseline;
         align-items: center;
         padding: 2rem;
         margin: 0 0 2rem 0;
@@ -526,10 +714,10 @@ main {
         display: inline-block;
         height: 200px;
         width: 200px;
+        top: 0;
     }
 
     .descriptionOne {
-        background-color: white;
         height: auto;
         width: 100%;
         display: flex;
@@ -548,17 +736,18 @@ main {
         flex-direction: column;
         justify-content: space-evenly;
         height: auto;
-        margin: 0;
         padding: 2rem;
+        position: relative;
+        z-index: 8;
+        max-height: 500px;
+        margin-bottom: 18rem;
     }
 
     .titleTwo {
-        background: rgb(58,83,209);
-        background: linear-gradient(120deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
         height: auto;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: baseline;
         align-items: center;
         padding: 2rem;
         margin: 0 0 2rem 0;
@@ -570,12 +759,12 @@ main {
 
     .seatImg {
         display: inline-block;
-        height: 200px;
-        width: 200px;
+        height: 180px;
+        width: auto;
+        top: 0;
     }
 
     .descriptionTwo {
-        background-color: white;
         height: auto;
         width: 100%;
         display: flex;
@@ -596,11 +785,15 @@ main {
         height: auto;
         margin: 0;
         padding: 2rem;
+        position: relative;
+        z-index: 6;
+        max-height: 500px;
+        margin-bottom: 20rem;
+
+
     }
 
     .titleThree {
-        background: rgb(58,83,209);
-        background: linear-gradient(120deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
         height: auto;
         width: 100%;
         display: flex;
@@ -616,12 +809,14 @@ main {
 
     .poppersImg {
         display: inline-block;
-        height: 200px;
-        width: 200px;
+        height: 250px;
+        width: auto;
+        top: 0;
+        justify-content: center;
+
     }
 
     .descriptionThree {
-        background-color: white;
         height: auto;
         width: 100%;
         display: flex;
@@ -642,11 +837,13 @@ main {
         height: auto;
         margin: 0;
         padding: 2rem;
+        position: relative;
+        z-index: 4;
+        min-height: 500px;
     }
 
     .titleFour {
-        background: rgb(58,83,209);
-        background: linear-gradient(120deg, rgba(58,83,209,1) 0%, rgba(219,225,255,0.12695500563506656) 100%);
+
         height: auto;
         width: 100%;
         display: flex;
@@ -662,12 +859,12 @@ main {
 
     .hubImg {
         display: inline-block;
-        height: 200px;
-        width: 200px;
+        height: 300px;
+        width: auto;
+        top: 0;
     }
 
     .descriptionFour {
-        background-color: white;
         height: auto;
         width: 100%;
         display: flex;
@@ -683,3 +880,19 @@ main {
 
 }
 
+
+@media (min-width: 2000px) {
+    
+    body {
+        margin: 0 25rem 0 25rem;
+    }
+
+    .projectsPage {
+        margin: 0 5rem 0 5rem;
+    }
+
+    .bottomcontainer {
+        border-bottom: none;
+    }
+
+}
